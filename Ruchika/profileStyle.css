@@ -1,6 +1,6 @@
 body{
     font-family: Arial, sans-serif;
-    background: #fff;
+    background: #fdf5df;
     margin: 0;
     padding: 0;
 }
@@ -80,7 +80,7 @@ body{
 }
 
 .follow-btn {
-    background: #1da1f2;
+    background: #2fc8d6;
     color: #fff;
     border: none;
     border-radius: 999px;
@@ -92,7 +92,7 @@ body{
     transition: background 0.2s;
 }
 .follow-btn:hover {
-    background: #1991da;
+    background:#5ebec4;
 }
 .noti-btn {
     background: #eee url('bell.svg') no-repeat center center;
