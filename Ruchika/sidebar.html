@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar</title>
+    <link rel="stylesheet" href="sidebarStyle.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="sidebar.js"></script>
+  </head>
+  <body style="display: flex;">
+    <div id="sidebar">
+      <div class="top">
+        <a class="logo-btn sidebar-link" data-frame="home.html">UniVerse</a>
+
+        <a class="menu-item sidebar-link" data-frame="home.html">
+          <i data-lucide="home"></i>
+          <span class="label">Home</span>
+        </a>
+
+        <a class="menu-item sidebar-link" data-frame="explore.html">
+          <i data-lucide="search"></i>
+          <span class="label">Explore</span>
+        </a>
+
+        <a class="menu-item sidebar-link" data-frame="notifications.html">
+          <i data-lucide="bell"></i>
+          <span class="label">Notifications</span>
+        </a>
+
+        <a class="menu-item sidebar-link" data-frame="messages.html">
+          <i data-lucide="mail"></i>
+          <span class="label">Messages</span>
+        </a>
+
+        <a class="menu-item sidebar-link" data-frame="unibot.html">
+          <i data-lucide="bot-message-square"></i>
+          <span class="label">UniBot</span>
+        </a>
+
+        <a class="menu-item sidebar-link" data-frame="profile.html">
+          <i data-lucide="user"></i>
+          <span class="label">Profile</span>
+        </a>
+
+        <a class="menu-item sidebar-link" data-frame="more.html">
+          <i data-lucide="more-horizontal"></i>
+          <span class="label">More</span>
+        </a>
+
+        <a class="post-btn sidebar-link" data-frame="post.html">
+          <span class="post-text">Post</span>
+          <span class="post-plus"><i data-lucide="plus"></i></span>
+        </a>
+      </div>
+
+      <div class="bottom">
+        <a class="sidebar-link profile-btn" data-frame="profile.html">
+          <img src="profilephoto.jpg" alt="profile" class="profile-img">
+          <div class="user-info">
+            <p class="name">BTS</p>
+            <p class="handle">@BTS_twt</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <iframe id="main-frame" style="flex:1; height:100vh; border:none;"></iframe>
+  </body>
+</html>
