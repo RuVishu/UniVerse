@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Messenger Clone</title>
+  <link rel="stylesheet" href="unimess.css">
+  <script type="text/javascript" src="unimess.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <button class="icon-btn" id="themeToggle" title="Toggle Theme">
+          <i class="fa-solid fa-user"></i>
+        </button>
+        <span class="username">University</span>
+        <span class="icon"><i class="fa-regular fa-pen-to-square"></i></span>
+      </div>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search">
+      </div>
+
+      <!-- Sidebar Chat List -->
+      <div class="chat-list" id="chatList">
+        <div class="chat" data-name="John Doe" onclick="openChat('Stu8')">
+          <img src="https://i.pravatar.cc/40?img=1" alt="user">
+          <div>
+            <p class="chat-name">Stu8</p>
+            <p class="chat-preview">Hey there 👋</p>
+            <p class="time">4:10 PM</p>
+          </div>
+        </div>
+        <div class="chat" data-name="Jane Smith" onclick="openChat('Stu2')">
+          <img src="https://i.pravatar.cc/40?img=2" alt="user">
+          <div>
+            <p class="chat-name">Stu2</p>
+            <p class="chat-preview">How are you?</p>
+            <p class="time">4:00 AM</p>
+          </div>
+        </div>
+        
+        <div class="chat" data-name="alex smith" onclick="openChat('Stu5')">
+          <img src="https://i.pravatar.cc/40?img=3" alt="user">
+          <div>
+            <p class="chat-name">Stu5</p>
+            <p class="chat-preview">How to make website using html css?</p>
+            <p class="time">10:10 PM</p>
+          </div>
+        </div>
+        <div class="chat" data-name="diana" onclick="openChat('Stu9')">
+          <img src="https://i.pravatar.cc/40?img=4" alt="user">
+          <div>
+            <p class="chat-name">Stu9</p>
+            <p class="chat-preview">bye</p>
+            <p class="time">9:30 PM</p>
+          </div>
+        </div>
+        <div class="chat" data-name="joseph" onclick="openChat('Stu7')">
+          <img src="https://i.pravatar.cc/40?img=5" alt="user">
+          <div>
+            <p class="chat-name">Stu7</p>
+            <p class="chat-preview">yesterday</p>
+            <p class="time">Yesterday</p>
+          </div>
+        </div>
+         <div class="chat" data-name="sara" onclick="openChat('Stu10')">
+          <img src="https://i.pravatar.cc/40?img=6" alt="user">
+          <div>
+            <p class="chat-name">Stu10</p>
+            <p class="chat-preview">I found you on facebook</p>
+            <p class="time">Yesterday</p>
+          </div>
+        </div>
+         <div class="chat" data-name="adam" onclick="openChat('Stu17')">
+          <img src="https://i.pravatar.cc/40?img=7" alt="user">
+          <div>
+            <p class="chat-name">Stu17</p>
+            <p class="chat-preview">ohhh ookay hope get better soon</p>
+            <p class="time">12/12/2025</p>
+          </div>
+        </div>
+         <div class="chat" data-name="dana" onclick="openChat('Stu13')">
+          <img src="https://i.pravatar.cc/40?img=8" alt="user">
+          <div>
+            <p class="chat-name">Stu13</p>
+            <p class="chat-preview">what happen Today?</p>
+            <p class="time">4/10/2024</p>
+          </div>
+        </div>
+         <div class="chat" data-name="george" onclick="openChat('Stu20')">
+          <img src="https://i.pravatar.cc/40?img=9" alt="user">
+          <div>
+            <p class="chat-name">Stu20</p>
+            <p class="chat-preview">How are you?</p>
+            <p class="time">14/08/2024</p>
+          </div>
+        </div>
+
+
+
+
+
+
+      </div>
+    </div>
+
+    <!-- Chat Window -->
+    <div class="chat-window">
+      <div class="chat-header" id="chatHeader">
+        <div class="chat-info">
+          <img src="https://i.pravatar.cc/40?img=1" alt="user">
+          <span id="chatUser">Select a chat</span>
+        </div>
+        <div class="chat-icons">
+          <span><i class="fa-solid fa-phone"></i></span>
+          <span><i class="fa-solid fa-video"></i></span>
+          <span><i class="fa-solid fa-circle-info"></i></span>
+        </div>
+      </div>
+
+       <div class="chat-messages" id="chatMessages">
+        <!-- Messages will load here -->
+      </div>
+
+      <div class="chat-input">
+        <span><i class="fa-regular fa-message"></i></span>
+        <input type="text" id="messageInput" placeholder="Message...">
+        <span><i class="fa-solid fa-microphone"></i></span>
+        <span><i class="fa-regular fa-images"></i></span>
+        <span><i class="fa-regular fa-heart"></i></span>
+        <button onclick="sendMessage()"><i class="fa-regular fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
