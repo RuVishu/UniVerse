@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="postStyle.css">
+    <title>Post-UniVerse</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div class="tweet-modal">
+      <div class="tweet-header">
+        <button class="close-btn">✕</button>
+        <span class="drafts">Drafts</span>
+      </div>
+
+      <div class="tweet-body">
+        <img src="profilephoto.jpg" alt="profile" class="avatar">
+        <textarea placeholder="What’s happening?"></textarea>
+      </div>
+
+      <div class="reply-privacy">Everyone can reply</div>
+
+      <div class="tweet-footer">
+        <div class="icons">
+          <button><i data-lucide="image"></i></button>
+          <button><i data-lucide="file-video"></i></button>
+          <button><i data-lucide="bar-chart-2"></i></button>
+          <button><i data-lucide="smile"></i></button>
+          <button><i data-lucide="calendar"></i></button>
+          <button><i data-lucide="map-pin"></i></button>
+        </div>
+        <button class="post-btn">Post</button>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+    </script>
+  </body>
