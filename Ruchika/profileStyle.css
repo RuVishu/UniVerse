@@ -1,19 +1,14 @@
-body{
+body {
     font-family: Arial, sans-serif;
     background: #fdf5df;
-    margin: 0;
-    padding: 0;
-}
-
+    min-height: 100vh;
 
 .twitter-profile {
-    max-width: 600px;
-    margin: 40px auto;
+    width: 100%;
     background: #fff;
     border: 1px solid #e1e8ed;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .coverPhoto {
@@ -21,7 +16,8 @@ body{
     height: 200px;
     object-fit: cover;
     background: #e1e8ed;
-    display: block;
+    border-radius: 12px 12px 0 0;
+}
 }
 
 .profile-header {
@@ -40,7 +36,6 @@ body{
     gap: 12px;
 }
 
-
 .profilePhoto {
     width: 120px;
     height: 120px;
@@ -49,7 +44,6 @@ body{
     border: 3px solid #fff;
     background: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    margin-left: 0;
     margin-right: 24px;
 }
 
@@ -101,7 +95,6 @@ body{
     width: 40px;
     height: 40px;
     border: none;
-    margin: 0;
     box-shadow: 0 1px 4px rgba(29,161,242,0.08);
     cursor: pointer;
     transition: background 0.2s;
@@ -110,3 +103,52 @@ body{
 .noti-btn:hover {
     background: #e1e8ed;
 }
+
+
+@media (max-width: 700px) {
+    .twitter-profile {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0 0 8px 0;
+    }
+    .coverPhoto {
+        height: 120px;
+        border-radius: 0;
+    }
+    .profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 8px;
+        margin-top: -50px;
+    }
+    .profilePhoto {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 8px;
+    }
+    .profile-info {
+        margin-left: 0;
+        padding: 0 8px;
+    }
+    .profile-info h2 {
+        font-size: 1.3rem;
+    }
+    .handle, .bio {
+        font-size: 1rem;
+    }
+    .profile-actions {
+        margin-left: 0;
+        gap: 8px;
+    }
+    .follow-btn {
+        padding: 8px 18px;
+        font-size: 0.95rem;
+    }
+    .noti-btn {
+        width: 32px;
+        height: 32px;
+        background-size: 18px 18px;
+    }
+}
+
