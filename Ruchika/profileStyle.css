@@ -2,6 +2,57 @@ body {
     font-family: Arial, sans-serif;
     background: #fdf5df;
     min-height: 100vh;
+}
+
+.coverPhoto-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.coverPhoto {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    background: #e1e8ed;
+    border-radius: 12px 12px 0 0;
+    cursor: pointer;
+}
+.icon-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #fff;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 8px;
+    cursor: pointer;
+}
+#edit-menu {
+    display: none;
+    position: absolute;
+    top: 56px;
+    right: 16px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    min-width: 160px;
+    z-index: 1000;
+}
+.edit-menu-item {
+    display: block;
+    padding: 12px 20px;
+    color: #222;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+.edit-menu-item:last-child {
+    border-bottom: none;
+}
 
 .twitter-profile {
     width: 100%;
@@ -9,15 +60,6 @@ body {
     border: 1px solid #e1e8ed;
     display: flex;
     flex-direction: column;
-}
-
-.coverPhoto {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    background: #e1e8ed;
-    border-radius: 12px 12px 0 0;
-}
 }
 
 .profile-header {
@@ -113,7 +155,7 @@ body {
         padding: 0 0 8px 0;
     }
     .coverPhoto {
-        height: 120px;
+        height: 180px;
         border-radius: 0;
     }
     .profile-header {

@@ -8,9 +8,19 @@
     </head>
     <body>
             <div class="twitter-profile">
-                <img src="coverphoto.jpg" alt="Cover Photo" class="coverPhoto" id="coverPhoto">
+                <div class="coverPhoto-container">
+                    <img src="coverphoto.jpg" alt="Cover Photo" class="coverPhoto" id="coverPhoto">
+                    <button id="edit-cover-btn" class="icon-btn">
+                        <i data-lucide="pencil"></i>
+                    </button>
+                    <div id="edit-menu">
+                        <a href="#" class="edit-menu-item">Change Cover</a>
+                        <a href="#" class="edit-menu-item">Upload Photo</a>
+                        <a href="#" class="edit-menu-item">Remove Cover</a>
+                    </div>
+                </div>
                 <div class="profile-header">
-                        <img src="profilephoto.jpg" alt="Profile Photo" class="profilePhoto">
+                        <img src="profilephoto.jpg" alt="Profile Photo" class="profilePhoto" id="profilePhoto" style="cursor:pointer;">
                         <div class="profile-actions">
                             <button class="noti-btn" aria-label="Notifications"></button>
                             <button class="follow-btn">Follow</button>
@@ -22,5 +32,7 @@
                         <p class="bio">Hi ! We are BTS</p>
                     </div>
             </div>
-    </body>
+                    <script src="https://unpkg.com/lucide@latest"></script>
+                    <script src="profile.js"></script>
+        </body>
 </html>
