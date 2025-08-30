@@ -1,0 +1,52 @@
+
+    :root {
+      --cream: #FDF5DF;
+      --teal: #5EBEC4;
+      --pink: #F92C85;
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      font-family: Arial, sans-serif;
+      background: var(--cream);
+    }
+
+    #sidebar {
+      width: 220px;
+      background: var(--teal);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      height: 100vh;
+      justify-content: space-between;
+    }
+
+    #sidebar .logo a {
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      display: block;
+      margin-bottom: 30px;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .menu-item:hover {
+      background: var(--pink);
+    }
+
+    .bottom-links {
+      margin-top: auto;
+    }

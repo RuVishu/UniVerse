@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniClass</title>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="crstyle.css"/>
+</head>
+<body>
+  <div id="sidebar">
+    <div class="logo">
+      <a href="#">UniVerse</a>
+    </div>
+
+    <a class="menu-item active" href="classes.html" target="contentFrame">
+      <i data-lucide="book-open"></i><span>Classes</span>
+    </a>
+    <a class="menu-item" href="notifications.html" target="contentFrame"><i data-lucide="bell"></i><span>Notifications</span></a>
+    <a class="menu-item" href="timetable.html" target="contentFrame"><i data-lucide="calendar"></i><span>Timetable</span></a>
+    <a class="menu-item" href="todo.html" target="contentFrame"><i data-lucide="check-square"></i><span>To-do</span></a>
+    <a class="menu-item" href="notes.html" target="contentFrame"><i data-lucide="file-text"></i><span>Notes</span></a>
+
+    <div class="bottom-links">
+      <a class="menu-item" href="settings.html" target="contentFrame"><i data-lucide="settings"></i><span>Settings</span></a>
+    </div>
+  </div>
+
+  <iframe 
+    name="contentFrame" 
+    src="classes.html" 
+    style="flex-grow: 1; border: none; height: 100vh;">
+  </iframe>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
