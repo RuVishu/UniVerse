@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FDF5DF;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.header svg {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.content .buttons button {
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin: 20px;
+    width: 80%;
+    background-color: #fff;
+    padding: 5px 30px;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+}
+
+.post {
+    width: 100%;
+    max-width: 600px; 
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.post * {
+    background-color: inherit !important;
+}
+.postheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-left: 15px;
+    gap: 10px;
+    width: 88%;
+}
+
+.postuser {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    overflow: hidden;
+}
+
+.postuser img {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.postinfo {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#editpost {
+    font-weight: 900;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.postimage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.interaction {
+    display: flex;
+    margin: 15px 25px;
+    justify-content: space-between;
+}
+
+.interaction .likes button {
+    background: none;
+    border: none;
+    padding-right: 15px;
+}
+
+.likes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.save button {
+    background: none;
+    border: none;
+}
+
+.interaction svg {
+    width: 20px;
+}
+
+.userpostinfo {
+    display: flex;
+    justify-content: start;
+    margin: 5px 25px;
+}
+
+#name {
+    padding-right: 15px;
+}
+
+.comments {
+    margin: 10px 20px;
+}
+
+.comments button {
+    background: none;
+    border: none;
+    padding: 5px;
+    color: #9e9d9d;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    overflow: hidden;
+    animation: popUp 0.25s ease;
+}
+
+.modal-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-content li {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.modal-content li:last-child {
+    border-bottom: none;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.modal-content li:hover {
+    background-color: #f9f9f9;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.chatbot{
+    height: 45px;
+    width: 45px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: inset;
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    margin-left: 45px;
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newpost{
+    height: 45px;
+    width: 45px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: inset;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    margin-left: 45px;
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
