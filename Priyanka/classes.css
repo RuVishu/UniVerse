@@ -1,0 +1,112 @@
+:root {
+	--cream: #FDF5DF;
+	--teal: #5EBEC4;
+	--pink: #F92C85;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background: var(--cream);
+	padding: 20px;
+}
+
+h2 {
+	color: var(--teal);
+	margin-bottom: 20px;
+}
+
+.class-card {
+	background: white;
+	border-radius: 12px;
+	padding: 20px;
+	margin-bottom: 15px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+	position: relative;
+	border: none;
+	outline: none;
+	width: 100%;
+	text-align: left;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+	display: block;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	color: inherit;
+}
+
+.class-title {
+	font-weight: bold;
+	font-size: 18px;
+	color: var(--teal);
+	margin-bottom: 5px;
+}
+
+.class-info {
+	font-size: 14px;
+	color: #333;
+	margin-bottom: 5px;
+}
+
+.menu-btn {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #666;
+}
+
+.dropdown {
+	display: none;
+	position: absolute;
+	top: 40px;
+	right: 15px;
+	background: white;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	z-index: 10;
+	color: var(--pink);
+.dropdown {
+	display: none;
+	position: absolute;
+	top: 40px;
+	right: 15px;
+	background: white;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	z-index: 10;
+}
+}
+
+.dropdown button:hover {
+	background: #f9f9f9;
+}
+
+.fab {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: var(--teal);
+	color: white;
+	border: none;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	font-size: 28px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	transition: background 0.3s;
+}
+
+.fab:hover {
+	background: var(--pink);
+}
