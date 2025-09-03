@@ -1,32 +1,39 @@
+body {
+  margin: 0;
+  background: #fdf5df;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
 .tweet-modal {
-  background: #000;
-  color: #fff;
-  width: 600px;
+  width: 600px auto;
+  height: auto;
   margin: 40px auto;
   border-radius: 16px;
   padding: 12px;
-  font-family: Arial, sans-serif;
 }
 
 .tweet-header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
-  color: #1d9bf0;
+  color: #2fc8d6;
   margin-bottom: 10px;
 }
 
 .close-btn {
   background: none;
   border: none;
-  color: #fff;
+  color: #2fc8d6;
   font-size: 20px;
   cursor: pointer;
 }
 
 .tweet-body {
   display: flex;
+  flex-direction: row;
   gap: 12px;
   margin-bottom: 8px;
 }
@@ -39,17 +46,18 @@
 
 textarea {
   flex: 1;
+  flex-direction: row;
   background: transparent;
   border: none;
   resize: none;
   font-size: 18px;
-  color: #fff;
+  color: black;
   outline: none;
 }
 
 .reply-privacy {
   font-size: 14px;
-  color: #1d9bf0;
+  color: #2fc8d6;
   margin: 8px 0;
 }
 
@@ -66,7 +74,7 @@ textarea {
   border: none;
   margin-right: 8px;
   cursor: pointer;
-  color: #1d9bf0; 
+  color: #2fc8d6; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +87,7 @@ textarea {
 }
 
 .post-btn {
-  background: #1d9bf0;
+  background: #2fc8d6;
   border: none;
   border-radius: 20px;
   padding: 6px 16px;
