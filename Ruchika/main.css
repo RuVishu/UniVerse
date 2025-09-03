@@ -5,7 +5,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.top {
+.top, .bottom {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -27,7 +27,7 @@ body {
   transition: width 0.3s ease;
 }
 
-.logo-btn, .menu-item, .icon-btn {
+.logo-btn, .menu-item, .icon-btn,.profile-btn {
   font-size: 16px;
   background: none;
   border: none;
@@ -82,32 +82,14 @@ body {
 }
 
 .post-btn:hover {
-  background: #5ebec4;
+  background: #ff4da6;
 }
 
-.bottom {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px;
-  border-radius: 9999px;
-  cursor: pointer;
-}
 
 .bottom:hover {
   background: #5ebec4;
 }
 
-.profile-btn {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px;
-  border-radius: 9999px;
-  background: none;
-  text-decoration: none;
-  width: 100%;
-}
 .profile-btn:hover {
   background: #5ebec4;
 }
@@ -133,7 +115,7 @@ body {
 
 @media (min-width: 1024px) {
   #sidebar {
-    width: 250px;
+    width: 300px;
   }
 
   .label {
