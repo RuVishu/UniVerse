@@ -1,3 +1,7 @@
+/* Red heart when liked */
+i.liked[data-lucide="heart"] {
+    color: red !important;
+}
 * {
     margin: 0;
     padding: 0;

@@ -5,60 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Back Button</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-<div class="navbar">
-  <div class="left-section">
-    <!-- Back button -->
-    <button class="back-btn" aria-label="Go back">
-      <img src="image.jpg" alt="Back" class="back-icon">
-    </button>
-    <p class="noti">Notifications</p>
+  <div class="navbar">
+    <div class="left-section">
+      <!-- Back button -->
+      <button class="back-btn" aria-label="Go back">
+        <i data-lucide="arrow-left"></i>
+      </button>
+      <p class="noti">Notifications</p>
+    </div>
   </div>
-</div>
-<div class="nav-2">
-  <div class="left">
-  <button class="all">All</button>
-  <button class="mention">Mentions</button>
-</div>
-</div>
-<div class="heading">
-  <p>ThisWeek
-</p></div>
-<div class="notification-card unread">
-  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="profile-img">
-  <div class="notification-content">
-    <p><strong>Aarush</strong> liked your post ❤️</p>
-    <span class="time">2h ago</span>
-  </div>
-  <span class="dot"></span>
-</div>
 
-<div class="notification-card">
-<img src="https://randomuser.me/api/portraits/women/45.jpg" alt="User" class="profile-img">
-  <div class="notification-content">
-    <p><strong>Shruti</strong> mentioned you in a comment 💬</p>
-    <span class="time">5h ago</span>
+  <div class="nav-2">
+    <div class="left">
+      <button class="all">All</button>
+      <button class="mention">Mentions</button>
+    </div>
   </div>
-</div>
-<div class="heading">
-  <p>Older
-</p></div>
-<div class="notification-card unread">
-  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="profile-img">
-  <div class="notification-content">
-    <p><strong>Navin</strong> liked your post ❤️</p>
-    <span class="time">2h ago</span>
-  </div>
-  <span class="dot"></span>
-</div>
 
-<div class="notification-card">
-<img src="https://randomuser.me/api/portraits/women/45.jpg" alt="User" class="profile-img">
-  <div class="notification-content">
-    <p><strong>Ruchika</strong> mentioned you in a comment 💬</p>
-    <span class="time">5h ago</span>
+  <div class="heading">
+    <p>ThisWeek</p>
   </div>
-</div>
+
+  <div class="notification-card unread">
+    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="profile-img">
+    <div class="notification-content">
+      <p><strong>Aarush</strong> liked your post ❤️</p>
+      <span class="time">2h ago</span>
+    </div>
+    <span class="dot"></span>
+  </div>
+
+  <div class="notification-card">
+    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="User" class="profile-img">
+    <div class="notification-content">
+      <p><strong>Shruti</strong> mentioned you in a comment 💬</p>
+      <span class="time">5h ago</span>
+    </div>
+  </div>
+
+  <div class="heading">
+    <p>Older</p>
+  </div>
+
+  <div class="notification-card unread">
+    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="profile-img">
+    <div class="notification-content">
+      <p><strong>Navin</strong> liked your post ❤️</p>
+      <span class="time">2h ago</span>
+    </div>
+    <span class="dot"></span>
+  </div>
+
+  <div class="notification-card">
+    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="User" class="profile-img">
+    <div class="notification-content">
+      <p><strong>Ruchika</strong> mentioned you in a comment 💬</p>
+      <span class="time">5h ago</span>
+    </div>
+  </div>
+
+  <!-- ✅ Init Lucide after DOM -->
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>

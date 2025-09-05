@@ -5,116 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Classes</title>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <style>
-    :root {
-      --cream: #FDF5DF;
-      --teal: #5EBEC4;
-      --pink: #F92C85;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--cream);
-      padding: 20px;
-    }
-
-    h2 {
-      color: var(--teal);
-      margin-bottom: 20px;
-    }
-
-    .class-card {
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 15px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-      position: relative;
-    }
-
-    .class-title {
-      font-weight: bold;
-      font-size: 18px;
-      color: var(--teal);
-      margin-bottom: 5px;
-    }
-
-    .class-info {
-      font-size: 14px;
-      color: #333;
-      margin-bottom: 5px;
-    }
-
-    /* 3-dot menu */
-    .menu-btn {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #666;
-    }
-
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 40px;
-      right: 15px;
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      z-index: 10;
-    }
-
-    .dropdown button {
-      display: block;
-      background: none;
-      border: none;
-      padding: 10px 15px;
-      width: 100%;
-      text-align: left;
-      cursor: pointer;
-      font-size: 14px;
-      color: var(--pink);
-    }
-
-    .dropdown button:hover {
-      background: #f9f9f9;
-    }
-
-    /* Floating Join/Create button */
-    .fab {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--teal);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      font-size: 28px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: background 0.3s;
-    }
-
-    .fab:hover {
-      background: var(--pink);
-    }
-  </style>
+  <link rel="stylesheet" href="classes.css">
 </head>
 <body>
   <h2>Classes</h2>
 
-  <!-- Example Class -->
-  <div class="class-card">
+  
+  <button class="class-card" type="button" tabindex="0" style="width:100%;text-align:left;" data-href="webdev.html">
     <div class="class-title">Course: Web Development</div>
     <div class="class-info">Paper: Frontend Basics</div>
     <div class="class-info">Teacher: John Doe</div>
@@ -123,9 +20,9 @@
     <div class="dropdown">
       <button>Unenroll</button>
     </div>
-  </div>
+  </button>
 
-  <div class="class-card">
+  <button class="class-card" type="button" tabindex="0" style="width:100%;text-align:left;" data-href="datascience.html">
     <div class="class-title">Course: Data Science</div>
     <div class="class-info">Paper: Python & ML</div>
     <div class="class-info">Teacher: Jane Smith</div>
@@ -134,32 +31,11 @@
     <div class="dropdown">
       <button>Unenroll</button>
     </div>
-  </div>
+  </button>
 
-  <!-- Floating Join/Create Class Button -->
+  
   <button class="fab"><i data-lucide="plus"></i></button>
 
-  <script>
-    lucide.createIcons();
-
-    // Toggle dropdown menus
-    document.querySelectorAll('.menu-btn').forEach(btn => {
-      btn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        const dropdown = this.nextElementSibling;
-        // Close other dropdowns
-        document.querySelectorAll('.dropdown').forEach(d => {
-          if (d !== dropdown) d.style.display = 'none';
-        });
-        // Toggle current dropdown
-        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-      });
-    });
-
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', () => {
-      document.querySelectorAll('.dropdown').forEach(d => d.style.display = 'none');
-    });
-  </script>
+  <script src="classes.js"></script>
 </body>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="search-header">
+            <button class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+
+            <div class="search-box">
+                <input type="text" placeholder="Type to search...">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+
+        <!-- Dropdown with usernames -->
+        <div class="dropdown" id="dropdown">
+            <ul>
+                <li>
+                    <a href="/user/johndoe">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="profile" class="avatar">
+                        <span>@johndoe</span>
+                    </a>
+                    <i class="fa-solid fa-xmark remove"></i>
+                </li>
+                <li>
+                    <a href="/user/sneha">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="profile" class="avatar">
+                        <span>@sneha</span>
+                    </a>
+                    <i class="fa-solid fa-xmark remove"></i>
+                </li>
+                <li>
+                    <a href="/user/tech_guru">
+                        <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="profile" class="avatar">
+                        <span>@tech_guru</span>
+                    </a>
+                    <i class="fa-solid fa-xmark remove"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
