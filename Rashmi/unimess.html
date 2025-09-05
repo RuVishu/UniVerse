@@ -11,100 +11,95 @@
 <body>
   <div class="container">
 
-    <!-- Sidebar -->
+    <!-- Sidebar --> 
     <div class="sidebar">
-      <div class="sidebar-header">
-        <button class="icon-btn" id="themeToggle" title="Toggle Theme">
-          <i class="fa-solid fa-user"></i>
-        </button>
-        <span class="username">University</span>
-        <span class="icon"><i class="fa-regular fa-pen-to-square"></i></span>
-      </div>
-      <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search">
+      <div class="searchbar-head">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search">
+        </div>
+        <span class="icon">
+          <i class="fa-regular fa-pen-to-square"></i>
+          <div class="dropdown">
+            <p>New Group</p>
+            <p>New Community</p>
+          </div>
+        </span>
       </div>
 
       <!-- Sidebar Chat List -->
       <div class="chat-list" id="chatList">
-        <div class="chat" data-name="John Doe" onclick="openChat('Stu8')">
+        <div class="chat" onclick="openChat('Stu8')">
           <img src="https://i.pravatar.cc/40?img=1" alt="user">
           <div>
             <p class="chat-name">Stu8</p>
-            <p class="chat-preview">Hey there 👋</p>
-            <p class="time">4:10 PM</p>
+            <p class="chat-preview">...</p>
           </div>
+          <span class="time">4:10 PM</span>
         </div>
-        <div class="chat" data-name="Jane Smith" onclick="openChat('Stu2')">
+        <div class="chat" onclick="openChat('Stu2')">
           <img src="https://i.pravatar.cc/40?img=2" alt="user">
           <div>
             <p class="chat-name">Stu2</p>
-            <p class="chat-preview">How are you?</p>
-            <p class="time">4:00 AM</p>
+            <p class="chat-preview">...</p>
           </div>
+          <span class="time">4:00 AM</span>
         </div>
-        
-        <div class="chat" data-name="alex smith" onclick="openChat('Stu5')">
+        <div class="chat" onclick="openChat('Stu5')">
           <img src="https://i.pravatar.cc/40?img=3" alt="user">
           <div>
             <p class="chat-name">Stu5</p>
-            <p class="chat-preview">How to make website using html css?</p>
-            <p class="time">10:10 PM</p>
+            <p class="chat-preview">...</p>
           </div>
+          <span class="time">10:10 PM</span>
         </div>
-        <div class="chat" data-name="diana" onclick="openChat('Stu9')">
+        <div class="chat" onclick="openChat('Stu9')">
           <img src="https://i.pravatar.cc/40?img=4" alt="user">
           <div>
             <p class="chat-name">Stu9</p>
-            <p class="chat-preview">bye</p>
-            <p class="time">9:30 PM</p>
+            <p class="chat-preview">...</p>
           </div>
+          <span class="time">9:30 PM</span>
         </div>
-        <div class="chat" data-name="joseph" onclick="openChat('Stu7')">
+        <div class="chat" onclick="openChat('Stu7')">
           <img src="https://i.pravatar.cc/40?img=5" alt="user">
           <div>
             <p class="chat-name">Stu7</p>
-            <p class="chat-preview">yesterday</p>
-            <p class="time">Yesterday</p>
+            <p class="chat-preview">...</p>
           </div>
+          <span class="time">Yesterday</span>
         </div>
-         <div class="chat" data-name="sara" onclick="openChat('Stu10')">
+        <div class="chat" onclick="openChat('Stu10')">
           <img src="https://i.pravatar.cc/40?img=6" alt="user">
           <div>
             <p class="chat-name">Stu10</p>
-            <p class="chat-preview">I found you on facebook</p>
-            <p class="time">Yesterday</p>
+            <p class="chat-preview">...</p>
           </div>
+          <span class="time">Yesterday</span>
         </div>
-         <div class="chat" data-name="adam" onclick="openChat('Stu17')">
+        <div class="chat" onclick="openChat('Stu17')">
           <img src="https://i.pravatar.cc/40?img=7" alt="user">
           <div>
             <p class="chat-name">Stu17</p>
-            <p class="chat-preview">ohhh ookay hope get better soon</p>
-            <p class="time">12/12/2025</p>
+            <p class="chat-preview">...</p>
           </div>
+          <span class="time">12/12/2025</span>
         </div>
-         <div class="chat" data-name="dana" onclick="openChat('Stu13')">
+        <div class="chat" onclick="openChat('Stu13')">
           <img src="https://i.pravatar.cc/40?img=8" alt="user">
           <div>
             <p class="chat-name">Stu13</p>
-            <p class="chat-preview">what happen Today?</p>
-            <p class="time">4/10/2024</p>
+            <p class="chat-preview">...</p>
           </div>
+          <span class="time">4/10/2024</span>
         </div>
-         <div class="chat" data-name="george" onclick="openChat('Stu20')">
+        <div class="chat" onclick="openChat('Stu20')">
           <img src="https://i.pravatar.cc/40?img=9" alt="user">
           <div>
             <p class="chat-name">Stu20</p>
-            <p class="chat-preview">How are you?</p>
-            <p class="time">14/08/2024</p>
+            <p class="chat-preview">...</p>
           </div>
+          <span class="time">14/08/2024</span>
         </div>
-
-
-
-
-
-
       </div>
     </div>
 
@@ -122,8 +117,62 @@
         </div>
       </div>
 
-       <div class="chat-messages" id="chatMessages">
-        <!-- Messages will load here -->
+      <div class="chat-messages" id="chatMessages">
+        <!-- threads remain the same -->
+        <div class="chat-thread" id="Stu8">
+          <div class="message received">
+            <p>Hey there 👋</p>
+            <span class="time">4:10 PM</span>
+          </div>
+        </div>
+        <div class="chat-thread" id="Stu2" style="display:none;">
+          <div class="message received">
+            <p>How are you?</p>
+            <span class="time">4:00 AM</span>
+          </div>
+        </div>
+        <div class="chat-thread" id="Stu5" style="display:none;">
+          <div class="message received">
+            <p>How to make website using html css?</p>
+            <span class="time">10:10 PM</span>
+          </div>
+        </div>
+        <div class="chat-thread" id="Stu9" style="display:none;">
+          <div class="message received">
+            <p>bye</p>
+            <span class="time">9:30 PM</span>
+          </div>
+        </div>
+        <div class="chat-thread" id="Stu7" style="display:none;">
+          <div class="message received">
+            <p>Yesterday</p>
+            <span class="time">Yesterday</span>
+          </div>
+        </div>
+        <div class="chat-thread" id="Stu10" style="display:none;">
+          <div class="message received">
+            <p>I found you on facebook</p>
+            <span class="time">Yesterday</span>
+          </div>
+        </div>
+        <div class="chat-thread" id="Stu17" style="display:none;">
+          <div class="message received">
+            <p>ohhh ookay hope get better soon</p>
+            <span class="time">12/12/2025</span>
+          </div>
+        </div>
+        <div class="chat-thread" id="Stu13" style="display:none;">
+          <div class="message received">
+            <p>what happen Today?</p>
+            <span class="time">4/10/2024</span>
+          </div>
+        </div>
+        <div class="chat-thread" id="Stu20" style="display:none;">
+          <div class="message received">
+            <p>How are you?</p>
+            <span class="time">14/08/2024</span>
+          </div>
+        </div>
       </div>
 
       <div class="chat-input">
