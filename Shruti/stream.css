@@ -1,0 +1,176 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px;
+}
+.head button {
+  background: none;
+  border: none;
+  padding: 0px 20px;
+  cursor: pointer;
+}
+
+.head button.active p {
+  border-bottom: 5px solid blue; 
+}
+
+.div1 {
+    display: flex;
+    align-items: center;
+}
+.div1 button{
+    border: none;
+    background-color: white;
+}
+.div1 p {
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.div2 {
+    display: flex;
+    align-items: center;
+}
+.div2 button{
+    border: none;
+    background-color: white;
+}
+.div2 p {
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.stream{
+    margin: 0px 20px;
+}
+.stream .class-profile {
+    background-image: url("https://slidechef.net/wp-content/uploads/2022/01/anime-classroom-background.jpg");
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.stream .class-profile h1 {
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.stream .classes {
+    margin-top: 20px;
+}
+
+.stream .announce {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+
+.stream .announce img {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #f4f4f4;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+
+}
+
+.stream .announce input {
+    width: 100%;
+    padding: 15px 5px;
+    border: none;
+}
+
+.class-work {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.class-work img {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #f4f4f4;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.classwork{
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.classwork .class-work {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.classwork .class-work .info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.classwork .class-work .due{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.classwork .class-work .due button{
+    border: none;
+    background-color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.people{
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.people .persons{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    gap: 15px;
+}
+.people h1{
+    margin: 25px 0px;
+}
+
+.people .persons img {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #f4f4f4;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
