@@ -1,30 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Planner</title>
-    <link rel="stylesheet" href="classPlanner.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Details</title>
+  <link rel="stylesheet" href="classPlanner.css">
 </head>
 <body>
-    <div class="container">
-        <span class="subject">
-            <div >h</div>
-            <div>e</div>
-            <div>e</div>
-            <div>h</div>
-            <div>e</div>
-            <div>h</div>
-            <div>h</div>
-            <div>e</div>
-            <div>e</div>
-            <div>y</div>
-            <div>e</div>
-            <div>h</div>
-            <div>h</div>
-            <div>e</div>
-            <div>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</div>
-        </span>
+  <div class="container">
+    
+    <!-- Header -->
+    <div class="header">
+      <a href="close.html">✕</a>
+      <a href="menu.html">⋮</a>
     </div>
+
+    <!-- Class Info -->
+    <div class="class-info">
+      <h1><a href="class.html">Rr</a></h1>
+      <p><a href="teacher.html">Tuu</a></p>
+      <p><a href="time.html">Wed, 12:45 – 13:40</a></p>
+    </div>
+
+     <div class="notes">
+  <a href="notes.html" target="_blank" class="notes-btn">📝 Take Notes</a>
+</div>
+
+
+    <!-- Progress Circle -->
+    <div class="progress">
+      <a href="progress.html">
+        <svg width="150" height="150">
+          <circle class="bg" cx="75" cy="75" r="70"></circle>
+          <circle class="bar" cx="75" cy="75" r="70"></circle>
+        </svg>
+        <div class="label">
+          <p class="big">5/17</p>
+          <p>Classes</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Attendance -->
+    <div class="stats">
+      <div><a href="attended.html">✔<br>Attended 0</a></div>
+      <div><a href="late.html">⚠<br>Late 0</a></div>
+      <div><a href="absent.html">✖<br>Absent 0</a></div>
+    </div>
+
+    <!-- Calendar -->
+    <div class="calendar">
+      <div class="day"><a href="day-8-6.html"><span>Wed</span><span>8/6</span><span class="tick">✔</span></a></div>
+      <div class="day"><a href="day-13.html"><span>Wed</span><span>13</span><span class="tick">✔</span></a></div>
+      <div class="day"><a href="day-20.html"><span>Wed</span><span>20</span><span class="tick">✔</span></a></div>
+      <div class="day"><a href="day-27.html"><span>Wed</span><span>27</span><span class="tick">✔</span></a></div>
+      <div class="day"><a href="day-9-3.html"><span>Wed</span><span>9/3</span><span class="tick">✔</span></a></div>
+    </div>
+
+    <!-- NEW: Timeline (below calendar) -->
+    <div class="timeline">
+      <!-- Class 1 -->
+      <div class="class-day">
+        <h3>Wed, Aug 6</h3>
+        <p>12:45 – 13:40</p>
+        <h4>Class 1</h4>
+        <div class="actions">
+          <a href="attend-1.html">✔ Attend</a>
+          <a href="notes.html">📝 Note</a>
+        </div>
+      </div>
+
+      <!-- Class 2 -->
+      <div class="class-day">
+        <h3>Wed, Aug 13</h3>
+        <p>12:45 – 13:40</p>
+        <h4>Class 2</h4>
+        <div class="actions">
+          <a href="attend-2.html">✔ Attend</a>
+          <a href="notes.html">📝 Note</a>
+        </div>
+      </div>
+
+      <!-- Class 3 -->
+      <div class="class-day">
+        <h3>Wed, Aug 20</h3>
+        <p>12:45 – 13:40</p>
+        <h4>Class 3</h4>
+        <div class="actions">
+          <a href="attend-3.html">✔ Attend</a>
+          <a href="notes.html">📝 Note</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="classPlanner.js"></script>
 </body>
 </html>
