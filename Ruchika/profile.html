@@ -1,38 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="profileStyle.css">
-        <title> Profile-UniVerse</title>
-    </head>
-    <body>
-            <div class="twitter-profile">
-                <div class="coverPhoto-container">
-                    <img src="coverphoto.jpg" alt="Cover Photo" class="coverPhoto" id="coverPhoto">
-                    <button id="edit-cover-btn" class="icon-btn">
-                        <i data-lucide="pencil"></i>
-                    </button>
-                    <div id="edit-menu">
-                        <a href="#" class="edit-menu-item">Change Cover</a>
-                        <a href="#" class="edit-menu-item">Upload Photo</a>
-                        <a href="#" class="edit-menu-item">Remove Cover</a>
-                    </div>
-                </div>
-                <div class="profile-header">
-                        <img src="profilephoto.jpg" alt="Profile Photo" class="profilePhoto" id="profilePhoto" style="cursor:pointer;">
-                        <div class="profile-actions">
-                            <button class="noti-btn" aria-label="Notifications"></button>
-                            <button class="follow-btn">Follow</button>
-                        </div>
-                    </div>
-                    <div class="profile-info">
-                        <h2>BTS</h2>
-                        <span class="handle">@BTS_twt</span>
-                        <p class="bio">Hi ! We are BTS</p>
-                    </div>
-            </div>
-                    <script src="https://unpkg.com/lucide@latest"></script>
-                    <script src="profile.js"></script>
-        </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="profileStyle.css">
+  <title>Profile-UniVerse</title>
+</head>
+<body>
+  <div class="twitter-profile">
+    <div class="coverPhoto-container">
+      <img src="coverphoto.jpg" alt="Cover Photo" class="coverPhoto" id="coverPhoto">
+      <button id="edit-cover-btn" class="icon-btn">
+        <i data-lucide="pencil"></i>
+      </button>
+      <div id="edit-menu">
+        <a href="#" class="edit-menu-item">Change Cover</a>
+        <a href="#" class="edit-menu-item">Upload Photo</a>
+        <a href="#" class="edit-menu-item">Remove Cover</a>
+      </div>
+    </div>
+
+    <div class="profile-actions">
+      <button class="noti-btn" aria-label="Notifications">
+        <i data-lucide="bell"></i>
+      </button>
+      <button class="follow-btn">Follow</button>
+    </div>
+
+    <div class="profile-info">
+      <h2>BTS</h2>
+      <span class="handle">@BTS_twt</span>
+      <p class="bio">Hi ! We are BTS</p>
+    </div>
+  </div>
+
+  <!-- 🔽 Posts Section -->
+  <div class="posts-section">
+    <h3>Posts</h3>
+
+    <!-- Post 1 -->
+    <div class="post-card">
+      <div class="post-header">
+        <img src="profilephoto.jpg" alt="Profile" class="post-avatar">
+        <div class="post-user-info">
+          <strong>BTS</strong>
+          <span class="handle">@BTS_twt</span>
+        </div>
+        <div class="post-menu">
+          <button class="post-menu-btn">
+            <i data-lucide="more-horizontal"></i>
+          </button>
+          <div class="post-menu-dropdown">
+            <a href="#">Edit Post</a>
+            <a href="#">Delete Post</a>
+            <a href="#">Archive Post</a>
+          </div>
+        </div>
+      </div>
+      <p class="post-content">
+        Our new album is coming soon 💜 Stay tuned!
+      </p>
+    </div>
+
+    <!-- Post 2 -->
+    <div class="post-card">
+      <div class="post-header">
+        <img src="profilephoto.jpg" alt="Profile" class="post-avatar">
+        <div class="post-user-info">
+          <strong>BTS</strong>
+          <span class="handle">@BTS_twt</span>
+        </div>
+        <div class="post-menu">
+          <button class="post-menu-btn">
+            <i data-lucide="more-horizontal"></i>
+          </button>
+          <div class="post-menu-dropdown">
+            <a href="#">Edit Post</a>
+            <a href="#">Delete Post</a>
+            <a href="#">Archive Post</a>
+          </div>
+        </div>
+      </div>
+      <p class="post-content">
+        Thank you ARMY for all the love ✨
+      </p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="profile.js"></script>
+</body>
 </html>
