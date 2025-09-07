@@ -5,31 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Class Details</title>
   <link rel="stylesheet" href="classPlanner.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <div class="container">
     
     <!-- Header -->
     <div class="header">
-      <a href="close.html">✕</a>
-      <a href="menu.html">⋮</a>
+      <a href="close.html"><i data-lucide="x"></i></a>
+      <a href="menu.html"><i data-lucide="more-vertical"></i></a>
     </div>
 
     <!-- Class Info -->
     <div class="class-info">
-      <h1><a href="class.html">Rr</a></h1>
-      <p><a href="teacher.html">Tuu</a></p>
-      <p><a href="time.html">Wed, 12:45 – 13:40</a></p>
+      <h1><a href="#">Rr</a></h1>
+      <p><a href="#">Tuu</a></p>
+      <p><a href="#">Wed, 12:45 – 13:40</a></p>
     </div>
 
-     <div class="notes">
-  <a href="notes.html" target="_blank" class="notes-btn">📝 Take Notes</a>
-</div>
+    <!-- Notes -->
+    <div class="notes">
+      <a href="notes.html" target="_blank" class="notes-btn">
+        <i data-lucide="pencil"></i>
+        <span>Notes</span>
+      </a>
+    </div>
 
 
     <!-- Progress Circle -->
     <div class="progress">
-      <a href="progress.html">
+      <a href="#">
         <svg width="150" height="150">
           <circle class="bg" cx="75" cy="75" r="70"></circle>
           <circle class="bar" cx="75" cy="75" r="70"></circle>
@@ -43,56 +48,88 @@
 
     <!-- Attendance -->
     <div class="stats">
-      <div><a href="attended.html">✔<br>Attended 0</a></div>
-      <div><a href="late.html">⚠<br>Late 0</a></div>
-      <div><a href="absent.html">✖<br>Absent 0</a></div>
+      <div><a href="#"><i data-lucide="check"></i><br>Attended 0</a></div>
+      <div><a href="#"><i data-lucide="alert-triangle"></i><br>Late 0</a></div>
+      <div><a href="#"><i data-lucide="x"></i><br>Absent 0</a></div>
     </div>
 
     <!-- Calendar -->
     <div class="calendar">
-      <div class="day"><a href="day-8-6.html"><span>Wed</span><span>8/6</span><span class="tick">✔</span></a></div>
-      <div class="day"><a href="day-13.html"><span>Wed</span><span>13</span><span class="tick">✔</span></a></div>
-      <div class="day"><a href="day-20.html"><span>Wed</span><span>20</span><span class="tick">✔</span></a></div>
-      <div class="day"><a href="day-27.html"><span>Wed</span><span>27</span><span class="tick">✔</span></a></div>
-      <div class="day"><a href="day-9-3.html"><span>Wed</span><span>9/3</span><span class="tick">✔</span></a></div>
+      <div class="day"><span>Wed</span><span>8/6</span><span class="tick"><i data-lucide="check"></i></span></div>
+      <div class="day"><span>Wed</span><span>13</span><span class="tick"><i data-lucide="check"></i></span></div>
+      <div class="day"><span>Wed</span><span>20</span><span class="tick"><i data-lucide="check"></i></span></div>
+      <div class="day"><span>Wed</span><span>27</span><span class="tick"><i data-lucide="check"></i></span></div>
+      <div class="day"><span>Wed</span><span>9/3</span><span class="tick"><i data-lucide="check"></i></span></div>
     </div>
 
-    <!-- NEW: Timeline (below calendar) -->
-    <div class="timeline">
-      <!-- Class 1 -->
-      <div class="class-day">
-        <h3>Wed, Aug 6</h3>
-        <p>12:45 – 13:40</p>
-        <h4>Class 1</h4>
-        <div class="actions">
-          <a href="attend-1.html">✔ Attend</a>
-          <a href="notes.html">📝 Note</a>
-        </div>
-      </div>
-
-      <!-- Class 2 -->
-      <div class="class-day">
-        <h3>Wed, Aug 13</h3>
-        <p>12:45 – 13:40</p>
-        <h4>Class 2</h4>
-        <div class="actions">
-          <a href="attend-2.html">✔ Attend</a>
-          <a href="notes.html">📝 Note</a>
-        </div>
-      </div>
-
-      <!-- Class 3 -->
-      <div class="class-day">
-        <h3>Wed, Aug 20</h3>
-        <p>12:45 – 13:40</p>
-        <h4>Class 3</h4>
-        <div class="actions">
-          <a href="attend-3.html">✔ Attend</a>
-          <a href="notes.html">📝 Note</a>
-        </div>
-      </div>
+    <!-- Timeline -->
+<div class="timeline">
+  <!-- Class 1 -->
+  <div class="class-day">
+    <h3>Wed, Aug 6</h3>
+    <p>12:45 – 13:40</p>
+    <h4>Class 1</h4>
+    <div class="actions">
+      <!-- Dropdown Attend Button -->
+  <div class="dropdown">
+    <button class="dropdown-btn">
+      <i data-lucide="check"></i> Attend
+    </button>
+    <div class="dropdown-menu">
+      <button class="option attend"><i data-lucide="check"></i> Attend</button>
+      <button class="option absent"><i data-lucide="x"></i> Absent</button>
+      <button class="option cancel"><i data-lucide="alert-triangle"></i> Cancel</button>
+      <button class="option waiver"><i data-lucide="slash"></i> Waiver</button>
     </div>
   </div>
+  <a href="notes.html" class="note-btn"><i data-lucide="pencil"></i> Note</a>
+</div>
+  </div>
+<!--class 2-->
+  <div class="class-day">
+    <h3>Wed, Aug 6</h3>
+    <p>12:45 – 13:40</p>
+    <h4>Class 1</h4>
+    <div class="actions">
+      <!-- Dropdown Attend Button -->
+  <div class="dropdown">
+    <button class="dropdown-btn">
+      <i data-lucide="check"></i> Attend
+    </button>
+    <div class="dropdown-menu">
+      <button class="option attend"><i data-lucide="check"></i> Attend</button>
+      <button class="option absent"><i data-lucide="x"></i> Absent</button>
+      <button class="option cancel"><i data-lucide="alert-triangle"></i> Cancel</button>
+      <button class="option waiver"><i data-lucide="slash"></i> Waiver</button>
+    </div>
+  </div>
+  <a href="notes.html" class="note-btn"><i data-lucide="pencil"></i> Note</a>
+</div>
+
+  </div>
+
+  <div class="class-day">
+    <h3>Wed, Aug 6</h3>
+    <p>12:45 – 13:40</p>
+    <h4>Class 1</h4>
+    <div class="actions">
+      <!-- Dropdown Attend Button -->
+  <div class="dropdown">
+    <button class="dropdown-btn">
+      <i data-lucide="check"></i> Attend
+    </button>
+    <div class="dropdown-menu">
+      <button class="option attend"><i data-lucide="check"></i> Attend</button>
+      <button class="option absent"><i data-lucide="x"></i> Absent</button>
+      <button class="option cancel"><i data-lucide="alert-triangle"></i> Cancel</button>
+      <button class="option waiver"><i data-lucide="slash"></i> Waiver</button>
+    </div>
+  </div>
+  <a href="notes.html" class="note-btn"><i data-lucide="pencil"></i> Note</a>
+</div>
+
+  </div>
+</div>
 
   <script src="classPlanner.js"></script>
 </body>

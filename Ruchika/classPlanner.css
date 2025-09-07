@@ -30,17 +30,63 @@ body {
   margin: 2px 0;
 }
 /* Notes */
-.notes {
+.notes-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
   margin: 30px auto;
+  max-width: 350px;
+
   background: #fff;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+
   border-radius: 10px;
   padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 350px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
+
+.notes-btn:hover {
+  background: #f3f3f3;
+  transform: translateY(-2px);
+}
+
+.notes-btn i,
+.notes-btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/*Note btn at end of progress circle*/
+.note-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+  flex: none;
+  width: auto;
+}
+
+.note-btn:hover {
+  background: #f1f1f1;
+}
+
 /* Circular Progress */
 .progress {
   position: relative;
@@ -233,22 +279,6 @@ a:hover {
   background: #e0e0e0;
 }
 
-
-.notes button {
-  background: #3b82f6;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.notes button:hover {
-  background: #2563eb;
-}
-
 /* Notes editor */
 #noteArea {
   margin-top: 15px;
@@ -284,4 +314,158 @@ a:hover {
 
 .hidden {
   display: none;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: flex-start; /* don’t stretch */
+}
+
+/* dropdown stays natural size */
+.dropdown {
+  position: relative;
+  display: inline-flex;
+}
+
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Toggle Button */
+.dropdown-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+  flex: none;          
+  width: auto;   
+}
+
+.dropdown-btn:hover {
+  background: #c8e6c9;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  overflow: hidden;
+  min-width: 150px;
+  z-index: 10;
+}
+
+/* Options inside Dropdown */
+.dropdown-menu .option {
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s ease;
+}
+
+/* Hover effect */
+.dropdown-menu .option:hover {
+  background: #f3f3f3;
+}
+
+/* Colored Options */
+.option.attend { color: #2e7d32; }
+.option.absent { color: #d32f2f; }
+.option.cancel { color: #f57c00; }
+.option.waiver { color: #555; }
+
+/* Show menu when active */
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+.dropdown-btn {
+  background: #f1f1f1;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s;
+}
+
+/* Different states */
+.dropdown-btn.attend {
+  background: #e8f9f0;
+  color: #2e7d32;
+  border-color: #a5d6a7;
+}
+
+.dropdown-btn.absent {
+  background: #fdecea;
+  color: #d32f2f;
+  border-color: #f5b5b0;
+}
+
+.dropdown-btn.cancel {
+  background: #fff4e5;
+  color: #f57c00;
+  border-color: #ffcc80;
+}
+
+.dropdown-btn.waiver {
+  background: #eeeeee;
+  color: #555;
+  border-color: #bbb;
+}
+
+/* Dropdown Menu (same as before) */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  overflow: hidden;
+  min-width: 150px;
+  z-index: 10;
+}
+
+.dropdown-menu .option {
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-menu .option:hover {
+  background: #f3f3f3;
 }

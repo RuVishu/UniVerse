@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", function () {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    });
+
 // Animate circular progress
 const circle = document.querySelector('.bar');
 const totalLength = circle.getTotalLength();
@@ -49,3 +55,50 @@ function saveNote() {
 
   URL.revokeObjectURL(url);
 }
+
+
+document.querySelectorAll('.dropdown-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const dropdown = btn.parentElement;
+    dropdown.classList.toggle('active');
+  });
+});
+
+document.querySelectorAll('.dropdown .option').forEach(option => {
+  option.addEventListener('click', (e) => {
+    const dropdown = option.closest('.dropdown');
+    const btn = dropdown.querySelector('.dropdown-btn');
+    btn.innerHTML = option.innerHTML; // set selected option as button text
+    dropdown.classList.remove('active');
+  });
+});
+
+// Close dropdown if clicked outside
+document.addEventListener('click', (e) => {
+  document.querySelectorAll('.dropdown').forEach(dropdown => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('active');
+    }
+  });
+});
+
+document.querySelectorAll('.dropdown .option').forEach(option => {
+  option.addEventListener('click', () => {
+    const dropdown = option.closest('.dropdown');
+    const btn = dropdown.querySelector('.dropdown-btn');
+
+    // update button text & icon
+    btn.innerHTML = option.innerHTML;
+
+    // reset previous state classes
+    btn.className = 'dropdown-btn';
+
+    // add class matching selected option
+    if (option.classList.contains('attend')) btn.classList.add('attend');
+    if (option.classList.contains('absent')) btn.classList.add('absent');
+    if (option.classList.contains('cancel')) btn.classList.add('cancel');
+    if (option.classList.contains('waiver')) btn.classList.add('waiver');
+
+    dropdown.classList.remove('active');
+  });
+});
