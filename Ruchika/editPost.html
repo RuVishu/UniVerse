@@ -3,41 +3,43 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="postStyle.css">
+    <link rel="stylesheet" href="editpost.css">
     <title>Post-UniVerse</title>
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
     <div class="tweet-modal">
       <div class="tweet-header">
-        <button class="close-btn">✕</button>
+        <button class="close-btn"><i data-lucide="x"></i></button>
         <span class="drafts">Drafts</span>
       </div>
 
       <div class="tweet-body">
         <img src="profilephoto.jpg" alt="profile" class="avatar">
-        <textarea placeholder="What’s happening?"></textarea>
+        <textarea placeholder="What's happening?"></textarea>
       </div>
 
-      <div class="reply-privacy">Everyone can reply</div>
+      <div class="reply-privacy">
+        <button id="replyBtn">Everyone can reply</button>
+        <ul id="replyMenu" class="hidden">
+          <li data-value="everyone">Everyone can reply</li>
+          <li data-value="followers">Only followers can reply</li>
+        </ul>
+      </div>
+
 
       <div class="tweet-footer">
         <div class="icons">
-          <button><i data-lucide="image"></i></button>
-          <button><i data-lucide="file-video"></i></button>
-          <button><i data-lucide="bar-chart-2"></i></button>
-          <button><i data-lucide="smile"></i></button>
-          <button><i data-lucide="calendar"></i></button>
-          <button><i data-lucide="map-pin"></i></button>
+          <input type="file" id="imageInput" accept="image/*" style="display:none">
+          <input type="file" id="videoInput" accept="video/*" style="display:none">
+          <button id="imageBtn"><i data-lucide="image"></i></button>
+          <button id="videoBtn"><i data-lucide="file-video"></i></button>
+          <button id="emojiBtn"><i data-lucide="smile"></i></button>
+          <button id="mapBtn"><i data-lucide="map-pin"></i></button>
         </div>
         <button class="post-btn">Post</button>
       </div>
     </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        if (window.lucide) {
-          window.lucide.createIcons();
-        }
-      });
-    </script>
+    <script src="editpost.js"></script>
   </body>
+  </html>

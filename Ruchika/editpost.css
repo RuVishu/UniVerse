@@ -46,14 +46,16 @@ body {
 
 textarea {
   flex: 1;
-  flex-direction: row;
   background: transparent;
   border: none;
   resize: none;
   font-size: 18px;
   color: black;
   outline: none;
+  overflow: hidden; 
+  min-height: 40px; 
 }
+
 
 .reply-privacy {
   font-size: 14px;
@@ -68,11 +70,16 @@ textarea {
   border-top: 1px solid #333;
   padding-top: 8px;
 }
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px; 
+}
 
 .icons button {
   background: none;
   border: none;
-  margin-right: 8px;
   cursor: pointer;
   color: #2fc8d6; 
   display: flex;
@@ -86,7 +93,7 @@ textarea {
   stroke-width: 2;
 }
 
-.post-btn {
+.post-btn, .drafts{
   background: #2fc8d6;
   border: none;
   border-radius: 20px;
@@ -96,7 +103,54 @@ textarea {
   cursor: pointer;
 }
 
+.post-btn:hover, .drafts:hover {
+  background: #26a0b3;
+}
 .post-btn:disabled {
   background: #555;
   cursor: default;
+}
+
+.reply-privacy {
+  position: relative;
+  display: inline-block;
+}
+
+#replyBtn {
+  font-size: 14px;
+  color: #fff;
+  background: #2fc8d6;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+#replyMenu {
+  list-style: none;
+  margin: 4px 0 0 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 180px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+#replyMenu li {
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #333;
+}
+
+#replyMenu li:hover {
+  background: #f0f0f0;
+}
+
+.hidden {
+  display: none;
 }
